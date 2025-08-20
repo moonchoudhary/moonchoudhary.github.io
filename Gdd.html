@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moon Choudhary | Personal & Business</title>
+  <style>
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1e1e1e;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav .logo {
+      color: #f04e23;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #f04e23;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('https://source.unsplash.com/1600x900/?business,city') center/cover no-repeat;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 20px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .hero .btn {
+      background: #f04e23;
+      color: white;
+      padding: 14px 30px;
+      text-decoration: none;
+      margin-top: 25px;
+      display: inline-block;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      animation: fadeInUp 2s ease;
+    }
+
+    .hero .btn:hover {
+      background: #ff6742;
+      transform: scale(1.05);
+    }
+
+    /* Sections */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #222;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #f04e23;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .section p, ul {
+      font-size: 18px;
+      color: #444;
+      margin-top: 15px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin: 12px 0;
+    }
+
+    /* Portfolio */
+    .portfolio-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .portfolio-images img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-images img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    #contact a {
+      color: #f04e23;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e1e1e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Moon Choudhary</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Choudhary Mustafijur Alom</h1>
+    <p>(Moon Choudhary)</p>
+    <p>Welcome to my personal and professional website</p>
+    <a href="#contact" class="btn">Contact Now</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am Moon Choudhary, a dedicated professional with expertise in real estate, 
+      construction waterproofing, and agricultural nursery supplies. 
+      With a B.Tech degree from NIT Kurukshetra, I am committed to delivering 
+      quality services and innovative solutions to my clients.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2>Core Competencies & Services</h2>
+    <ul>
+      <li>🏠 Real Estate Consulting & Property Transactions (Residential & Commercial)</li>
+      <li>💧 Expert Waterproofing Solutions for Structures</li>
+      <li>🌱 Premium Supply of Agricultural Nursery Plants</li>
+      <li>🍎 Reliable Supplier of Food Agricultural Products</li>
+    </ul>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <h2>My Work</h2>
+    <div class="portfolio-images">
+      <img src="https://source.unsplash.com/400x300/?real-estate" alt="Real Estate Project">
+      <img src="https://source.unsplash.com/400x300/?construction" alt="Construction Work">
+      <img src="https://source.unsplash.com/400x300/?agriculture" alt="Agriculture Nursery">
+      <img src="https://source.unsplash.com/400x300/?business" alt="Business Growth">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>📞 Phone: <a href="tel:+919101567995">+91-9101567995</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/919101567995" target="_blank">Chat with Me</a></p>
+    <p>📧 Email: <a href="mailto:moonchoudhury567@gmail.com">moonchoudhury567@gmail.com</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Moon Choudhary. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
