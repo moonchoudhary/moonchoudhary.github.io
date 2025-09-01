@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shouq Agro Estates</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+body { line-height:1.6; color:#333; scroll-behavior:smooth; overflow-x:hidden; }
+a { text-decoration:none; color:inherit; }
+img { display:block; max-width:100%; border-radius:10px; }
+
+header { background:#2E7D32; color:#fff; padding:20px 0; position:sticky; top:0; z-index:1000; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+header .container { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto; padding:0 20px; flex-wrap:wrap;}
+header nav a { margin-left:20px; font-weight:600; transition:0.3s; color:#fff;}
+header nav a:hover { color:#FFC107;}
+
+.hero { height:90vh; background:url('https://images.pexels.com/photos/5675678/pexels-photo-5675678.jpeg') no-repeat center/cover; display:flex; flex-direction:column; justify-content:center; align-items:center; color:#fff; text-align:center; position:relative; overflow:hidden;}
+.hero::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.35);}
+.hero h1,.hero p { position:relative; z-index:1; opacity:0; transform:translateY(50px); transition:1s;}
+.hero h1{font-size:3rem;margin-bottom:20px;}
+.hero p{font-size:1.3rem;margin-bottom:30px;}
+.btn{background:#FFC107;color:#2E7D32;padding:12px 30px;border-radius:25px;font-weight:600;transition:0.3s;}
+.btn:hover{background:#e0a800; transform:scale(1.05);}
+
+.section{padding:80px 20px; max-width:1200px; margin:auto; opacity:0; transform:translateY(50px); transition:all 1s ease;}
+.section h2{text-align:center;margin-bottom:50px;font-size:2rem;color:#2E7D32;}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px;}
+.card{background:#f4f4f4;padding:25px;border-radius:15px;box-shadow:0 6px 12px rgba(0,0,0,0.1);transition:0.5s;}
+.card:hover{transform:translateY(-10px) scale(1.03); box-shadow:0 15px 25px rgba(0,0,0,0.2);}
+.card h3{color:#2E7D32;margin-bottom:15px;}
+.card p{line-height:1.7;}
+
+.founder-director .card:nth-child(even){background:#f0f4f8;}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px; perspective:1000px;}
+.gallery-grid img{cursor:pointer;transition:0.5s; opacity:0; transform:scale(0.8);}
+.gallery-grid img.show{opacity:1; transform:scale(1);}
+
+#lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:none;justify-content:center;align-items:center;z-index:10000;transition:0.5s;}
+#lightbox img{max-width:90%;max-height:90%;border-radius:10px;}
+
+form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;}
+input,textarea{padding:12px;border-radius:5px;border:1px solid #ccc;transition:0.3s;}
+input:focus,textarea:focus{border-color:#2E7D32;outline:none;}
+input[type="submit"]{background:#2E7D32;color:#fff;border:none;cursor:pointer;font-weight:600;transition:0.3s;}
+input[type="submit"]:hover{background:#1b4b1b;transform:scale(1.05);}
+
+#backTop{position:fixed;bottom:30px;right:30px;background:#2E7D32;color:#fff;padding:12px 15px;border-radius:50%;cursor:pointer;font-size:18px;display:none;transition:0.3s;}
+#backTop:hover{background:#1b4b1b;transform:scale(1.1);}
+
+@media(max-width:768px){.cards{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<h1>Shouq Agro Estates</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#subsidiaries">Subsidiaries</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<h1>Rooted in Assam, Growing for the World</h1>
+<p>Empowering Assam's agricultural communities through innovation and sustainability.</p>
+<a href="#about" class="btn">Explore Our Work</a>
+</section>
+
+<section class="section" id="about">
+<h2>About Us</h2>
+<div class="cards">
+<div class="card"><h3>Mission</h3><p>Empowering Assam’s agricultural communities through sustainable farming, education, and innovation, blending traditional wisdom with modern techniques.</p></div>
+<div class="card"><h3>Vision</h3><p>To become a leading agro-based institution in Northeast India where every initiative uplifts rural livelihoods and every farmer becomes a changemaker.</p></div>
+</div>
+
+<div class="founder-director" style="margin-top:50px;">
+<div class="card">
+<h3>Founder — Kamal Uddin Choudhury</h3>
+<p>Kamal Uddin Choudhury is the founding pillar of Shouq Agro Estates, a visionary leader and social activist whose life is dedicated to Assam’s rural revival. With decades of experience as an NSS commander, educationalist, and agriculturalist, Kamal has transformed countless villages through youth mobilization, sustainable farming projects, and education initiatives. He believes that agriculture is not just about crops, but about cultivating communities, values, and futures. His guidance and mentorship have created a strong foundation for Shouq Agro Estates, turning it into a movement that empowers farmers and celebrates Assam’s agricultural heritage.</p>
+</div>
+<div class="card">
+<h3>Director — Mustafijur Alom Choudhary (Moon Choudhary)</h3>
+<p>Moon Choudhary, the dynamic Director of Shouq Agro Estates, combines cutting-edge technical knowledge with a deep passion for community development. A proud NIT graduate and accomplished social activist, he spearheads innovative agricultural solutions while ensuring every program benefits rural communities. Moon’s vision ensures that Shouq Agro Estates stays at the forefront of agro-innovation, integrating technology with tradition, modern farming methods with Assam’s rich heritage, and empowering farmers to thrive sustainably in today’s world.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="subsidiaries">
+<h2>Our Subsidiaries</h2>
+<div class="cards">
+<div class="card"><h3>Shouq Dairy Farms</h3><p>Ethical dairy farming with indigenous breeds and organic feed, delivering pure milk from pasture to people.</p></div>
+<div class="card"><h3>Shouq Nurseries</h3><p>Cultivating high-quality saplings: fruit trees, medicinal plants, and native species for farmers & community gardens.</p></div>
+<div class="card"><h3>Shouq Livestock</h3><p>Responsible livestock care with traditional knowledge & modern hygiene, focusing on animal health and rural employment.</p></div>
+<div class="card"><h3>Shouq Aqua Farms</h3><p>Sustainable freshwater fish farming, preserving native species and generating rural livelihoods.</p></div>
+<div class="card"><h3>Shouq Organics</h3><p>Organic vegetables, grains & herbs grown with natural composting and traditional techniques.</p></div>
+<div class="card"><h3>Shouq AgroTech</h3><p>Smart farming solutions including soil testing, irrigation systems, and agri-data tools empowering farmers.</p></div>
+</div>
+</section>
+
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card"><h3>Farmer Training</h3><p>Hands-on workshops and training programs to educate farmers in sustainable and modern agriculture.</p></div>
+<div class="card"><h3>Organic Farming</h3><p>Guidance and support for chemical-free farming practices to ensure health and soil purity.</p></div>
+<div class="card"><h3>Livestock Care</h3><p>Assistance in animal husbandry, breed improvement, and health management for rural communities.</p></div>
+</div>
+</section>
+
+<section class="section" id="counters">
+<h2>Our Impact</h2>
+<div class="cards">
+<div class="card"><h3 id="counter1">0</h3><p>Farmers Trained</p></div>
+<div class="card"><h3 id="counter2">0</h3><p>Acres Cultivated</p></div>
+<div class="card"><h3 id="counter3">0</h3><p>Livestock Managed</p></div>
+</div>
+</section>
+
+<section class="section" id="gallery">
+<h2>Gallery</h2>
+<div class="gallery-grid">
+<img src="https://images.pexels.com/photos/5675678/pexels-photo-5675678.jpeg" alt="Assam Farmer">
+<img src="https://images.pexels.com/photos/2342345/pexels-photo-2342345.jpeg" alt="Tea Plantation Assam">
+<img src="https://images.pexels.com/photos/6786789/pexels-photo-6786789.jpeg" alt="Organic Vegetables">
+<img src="https://images.pexels.com/photos/3453456/pexels-photo-3453456.jpeg" alt="Rural Assam Village">
+</div>
+</section>
+
+<section class="section" id="testimonials">
+<h2>What Our Community Says</h2>
+<div class="cards" id="testimonialCards">
+<div class="card"><p>"Shouq Agro Estates transformed the way I farm sustainably!"</p><strong>- Ramesh Dutta</strong></div>
+<div class="card"><p>"The training programs are extremely practical and useful for villagers."</p><strong>- Anita Saikia</strong></div>
+<div class="card"><p>"I received excellent livestock guidance and support."</p><strong>- Sunil Bora</strong></div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact / Join Us</h2>
+<form id="contactForm">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<textarea name="message" placeholder="Message / Interest" rows="5" required></textarea>
+<input type="submit" value="Send Message">
+</form>
+</section>
+
+<div id="lightbox"><img src="" alt=""></div>
+<div id="backTop">&#8679;</div>
+
+<footer>
+&copy; 2025 Shouq Agro Estates. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+emailjs.init('YOUR_USER_ID'); // replace with EmailJS user ID
+document.getElementById('contactForm').addEventListener('submit', function(e){
+e.preventDefault();
+emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', this)
+.then(()=>{alert('Message sent successfully!');this.reset();})
+.catch(err=>alert('Error:'+JSON.stringify(err)));
+});
+
+// Scroll animations
+const sections=document.querySelectorAll('.section,.hero,.gallery-grid img,.card');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity=1;entry.target.style.transform='translateY(0)';}});
+},{threshold:0.2});
+sections.forEach(sec=>observer.observe(sec));
+
+// Lightbox
+const lightbox=document.getElementById('lightbox');
+const images=document.querySelectorAll('.gallery-grid img');
+const lightboxImg=lightbox.querySelector('img');
+images.forEach(img=>{img.addEventListener('click',()=>{lightbox.style.display='flex';lightboxImg.src=img.src;});});
+lightbox.addEventListener('click',()=>{lightbox.style.display='none';});
+
+// Back to top
+const backTop=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{window.scrollY>300?backTop.style.display='block':backTop.style.display='none';});
+backTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
+
+// Counters
+const counters=[{id:'counter1',target:1500},{id:'counter2',target:250},{id:'counter3',target:1200}];
+counters.forEach(counter=>{let el=document.getElementById(counter.id);let count=0;function update(){if(count<counter.target){count+=Math.ceil(counter.target/200);el.innerText=count;setTimeout(update,20);}else{el.innerText=counter.target;}} update();});
+
+// Testimonials slider
+let testimonialIndex=0;
+const testimonialCards=document.getElementById('testimonialCards').children;
+setInterval(()=>{for(let i=0;i<testimonialCards.length;i++){testimonialCards[i].style.display='none';}testimonialIndex++;if(testimonialIndex>testimonialCards.length-1)testimonialIndex=0;testimonialCards[testimonialIndex].style.display='block';},4000);
+</script>
+</body>
+</html>
